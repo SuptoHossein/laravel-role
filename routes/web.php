@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/roles/create', [RoleController::class, 'create'])->name('role.create');
     Route::post('/roles', [RoleController::class, 'store'])->name('role.store');
     Route::get('/roles/{id}/edit', [RoleController::class, 'edit'])->name('role.edit');
-    Route::put('/roles/{id}', [PermissionController::class, 'update'])->name('role.update');
+    Route::put('/roles/{id}', [RoleController::class, 'update'])->name('role.update');
 });
 
 require __DIR__ . '/auth.php';
